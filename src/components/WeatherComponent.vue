@@ -74,11 +74,36 @@ export default {
       this.weather = results;
     },
     setDate() {
+      const monthsOfTheYear = [
+        "Enero",
+        "Febrero",
+        "Marzo",
+        "Abril",
+        "Mayo",
+        "Junio",
+        "Julio",
+        "Agosto",
+        "Septiembre",
+        "Octubre",
+        "Noviembre",
+        "Diciembre",
+      ];
+      const daysOfTheWeek = [
+        "Domingo",
+        "Lunes",
+        "Martes",
+        "Miércoles",
+        "Jueves",
+        "Viernes",
+        "Sábado",
+      ];
+
       let currentDate = new Date();
+      let d = currentDate.getDate();
       let currentYear = currentDate.getFullYear();
-      let currentDay = currentDate.getDate();
-      let currentMonth = currentDate.getMonth() + 1;
-      return `${currentDay} / ${currentMonth} / ${currentYear}`;
+      let currentDay = daysOfTheWeek[currentDate.getDay()];
+      let currentMonth = monthsOfTheYear[currentDate.getMonth() + 1];
+      return `${currentDay}, ${d} de ${currentMonth} ${currentYear}`;
     },
   },
 };
