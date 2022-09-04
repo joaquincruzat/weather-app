@@ -55,7 +55,7 @@ export default {
   data() {
     return {
       apiKey: "baf48ede5f61b170ec8628ba06ff02bd",
-      urlBase: "http://api.openweathermap.org/data/2.5/",
+      urlBase: "https://api.openweathermap.org/data/2.5/",
       query: "",
       weather: {},
     };
